@@ -1,0 +1,63 @@
+form, div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    flex-wrap: wrap;
+}
+
+form input
+{
+    font-size: 16px;
+}
+
+#english, #shuffle
+{
+   margin-right: 10%;
+}
+
+#hiragana, #random
+{
+    margin-left: 10%;
+    
+}
+
+#random + label
+{
+    margin-left: 2%;
+    font-size: 18px;
+}
+
+#prompt, #output
+{
+    text-align: center;
+    font-style: normal;
+    font-size: 40px;
+}
+
+#output
+{
+    font-size: 30px;
+}
+
+#user 
+{
+    resize: none;
+    height: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#input_vocab_list
+{
+    resize: none;
+    padding: 5px;
+    height: 18px;
+}
+
+a
+{
+    font-size: 15px;
+}

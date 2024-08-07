@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anki</title>
+        <link rel="stylesheet" type="text/css" href="anki_css.css">
+        <script src="anki_input.js"></script>
+    </head>
+
+    <body>
+        <header style="text-align: center;"><a href="anki_master.html">Click to go to back.</a></header>
+        
+        <pre id="prompt">Paste in table.</pre>
+        
+        <div>
+            <textarea id="user" autofocus oninput="getInput()" placeholder="Paste Here" rows="1" cols="50"></textarea>
+        </div>
+        
+        <p id="output"></p>
+        <p id="test"></p>
+    </body>
+</html>

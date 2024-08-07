@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Anki</title>
+        <link rel="stylesheet" type="text/css" href="anki_css.css">
+        <script src="anki_master.js"></script>
+    </head>
+
+    <body onload="reset(), create_words_list()">
+        <header style="text-align: center;">
+            Type 'giveup' to get the answer, type "l" or "b" to go back, type "r" to reset view, and press 'enter' with nothing to go to next word. <a href="anki_input.html">Click to enter table.</a>
+            </header>
+        
+        <br>
+        
+        <form>
+            <input id="get_anki_table" type="button" value="Get Table" onclick="get_table()">
+            <label for="learn" style="margin: 0 1% 0 5%;" onclick="reset()">
+                Learn
+                <input type="checkbox" id="learn" name="learn">
+                </label>
+        </form>
+        
+        <form>
+            <a href="anki_json.html" style="margin-right: 5%;">Click to see sample JSON</a>
+            <textarea id="input_vocab_list" rows="1" cols="20" placeholder="Enter URL Here" style="margin-right: 5%;">https://cdn.jsdelivr.net/gh/Nvt500/Anki@2a37c0cc73c07f8504057a6bcad69fbef87531ed/anki.json</textarea>
+            <input id="get_vocab_list" type="button" value="Get Master Vocab" onclick="master_vocab()">
+        </form>
+        
+        <form>
+            <input id="english" type="button" value="Answer with english" onclick="switch_answer()" disabled>
+            <input id="hiragana" type="button" value="Answer with hiragana" onclick="switch_answer()">
+        </form>
+        
+        <form>
+            <input id="shuffle" type="button" value="Shuffle" onclick="shuffle_words()">
+            <input id="random" name="random" type="button" value="Give Random" onclick="switch_give_random()">
+            <label id="random_label" type="text" for="random">Off</label>
+        </form>
+        
+        <form id="words_list">
+            
+        </form>
+        
+        <pre id="prompt"></pre>
+        
+        <div>
+            <textarea id="user" autofocus oninput="getInput()" placeholder="Enter Answer Here" rows="1" cols="50"></textarea>
+        </div>
+        
+        <p id="output"></p>
+        <p id="test"></p>
+    </body>
+</html>
